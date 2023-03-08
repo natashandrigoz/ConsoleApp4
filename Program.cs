@@ -8,53 +8,12 @@ namespace ConsoleApp4
 {
     internal class Program
     {
-        //Пример 1. Создание простого метода и его вызов
-        //static void Main(string[] args)
-        //{
-        //    SayHello();
-        //    SayGoodbye();
-        //    Console.Read();
-        //}
-        //static void SayHello()
-        //{
-        //    Console.WriteLine("Hello!");
-        //}
-        //static void SayGoodbye()
-        //{
-        //    Console.WriteLine("GoodBye!");
-        //}
-        //Пример 2. Вызов пустого метода без возвращения значений
-        /// <summary>
-        /// Дополнительный метод Func()
-        /// </summary>
-        //static void Func()
-        //{
-        //    Console.Write("x= ");
-        //    double x = double.Parse(Console.ReadLine());
-        //    double f = Math.Pow(x, 2);
-        //    Console.WriteLine($"f({x})= {f}");
-        //}
-        /// <summary>
-        /// Точка входа в программу
-        /// </summary>
-        //static void Main()
-        //{
-        //    //Вызов метода Func() n раз
-        //    Console.Write("n= ");
-        //    byte n = byte.Parse(Console.ReadLine());
-        //    for (byte i=1;i<=n;i++)
-        //    {
-        //        Func(); // вызов метода Func
-        //    }
-        //    Console.Read();
-        //}
-        //Пример 3.Вызов метода с возвращением значения выражения 
         ///<summary>
-        ///Доп. метод вычисления значения функции
+        ///Доп. метод нахождения суммы двух чисел
         ///</summary>
-        static double Func(double x)
+        static double Func(double x, double y)
         {
-            return Math.Pow(x, 2) + x - 1;
+            return x+y;
         }
         /// <summary>
         /// Точка входа в программу
@@ -63,8 +22,10 @@ namespace ConsoleApp4
         {
             Console.Write("x= ");
             double x = Convert.ToDouble(Console.ReadLine());
-            double y=Func(x);
-            Console.WriteLine($"y= {y}");
+            Console.Write("y= ");
+            double y = Convert.ToDouble(Console.ReadLine());
+            double z=Func(x,y);
+            Console.WriteLine($"z= {z}");
             Console.Read();
         }
     }
