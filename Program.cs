@@ -27,27 +27,45 @@ namespace ConsoleApp4
         /// <summary>
         /// Дополнительный метод Func()
         /// </summary>
-        static void Func()
+        //static void Func()
+        //{
+        //    Console.Write("x= ");
+        //    double x = double.Parse(Console.ReadLine());
+        //    double f = Math.Pow(x, 2);
+        //    Console.WriteLine($"f({x})= {f}");
+        //}
+        /// <summary>
+        /// Точка входа в программу
+        /// </summary>
+        //static void Main()
+        //{
+        //    //Вызов метода Func() n раз
+        //    Console.Write("n= ");
+        //    byte n = byte.Parse(Console.ReadLine());
+        //    for (byte i=1;i<=n;i++)
+        //    {
+        //        Func(); // вызов метода Func
+        //    }
+        //    Console.Read();
+        //}
+        //Пример 3.Вызов метода с возвращением значения выражения 
+        ///<summary>
+        ///Доп. метод вычисления значения функции
+        ///</summary>
+        static double Func(double x)
         {
-            Console.Write("x= ");
-            double x = double.Parse(Console.ReadLine());
-            double f = Math.Pow(x, 2);
-            Console.WriteLine($"f({x})= {f}");
+            return Math.Pow(x, 2) + x - 1;
         }
         /// <summary>
         /// Точка входа в программу
         /// </summary>
         static void Main()
         {
-            //Вызов метода Func() n раз
-            Console.Write("n= ");
-            byte n = byte.Parse(Console.ReadLine());
-            for (byte i=1;i<=n;i++)
-            {
-                Func(); // вызов метода Func
-            }
+            Console.Write("x= ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            double y=Func(x);
+            Console.WriteLine($"y= {y}");
             Console.Read();
         }
     }
-
 }
