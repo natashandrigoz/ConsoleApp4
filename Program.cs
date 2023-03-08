@@ -10,6 +10,18 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
+            SayHello();
+            SayGoodbye();
+            Console.Read();
+        }
+        static void SayHello()
+        {
+            Console.WriteLine("Hello!");
+        }
+        static void SayGoodbye()
+        {
+            Console.WriteLine("GoodBye!");
         }
     }
+
 }
