@@ -40,6 +40,7 @@ namespace ConsoleApp4
         static void Main()
         {
             Func();
+            Func();
             Console.Read();
         }
     }
