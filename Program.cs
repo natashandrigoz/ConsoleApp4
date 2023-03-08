@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp4
 {
+    /// <summary>
+    /// Нахождение максимальной величины из двух целых переменных a, b
+    /// </summary>
     internal class Program
     {
         ///<summary>
-        ///Доп. метод нахождения суммы двух чисел
+        ///Доп. метод нахождения максимальной величины
         ///</summary>
         static double Func(double x, double y)
         {
-            return x+y;
+            if (x > y)
+            {
+                return x;
+            }
+            else
+            {
+                return y;
+            }
         }
         /// <summary>
         /// Точка входа в программу
@@ -24,8 +34,8 @@ namespace ConsoleApp4
             double x = Convert.ToDouble(Console.ReadLine());
             Console.Write("y= ");
             double y = Convert.ToDouble(Console.ReadLine());
-            double z=Func(x,y);
-            Console.WriteLine($"z= {z}");
+            double max=Func(x,y);
+            Console.WriteLine($"max= {max}");
             Console.Read();
         }
     }
