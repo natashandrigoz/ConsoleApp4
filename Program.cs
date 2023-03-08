@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp4
 {
     /// <summary>
-    /// Найти наибольшее значение из трех чисел a, b, c
+    /// Найти s=max(a, b) + max(c, d)
     /// </summary>
     internal class Program
     {
@@ -23,14 +23,16 @@ namespace ConsoleApp4
         /// </summary>
         static void Main()
         {
-            Console.Write("x= ");
-            double x = Convert.ToDouble(Console.ReadLine());
-            Console.Write("y= ");
-            double y = Convert.ToDouble(Console.ReadLine());
-            Console.Write("z= ");
-            double z = Convert.ToDouble(Console.ReadLine());
-            double max = Max(Max(x, y),z);
-            Console.WriteLine($"max= {max}");
+            Console.Write("a= ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("b= ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            Console.Write("c= ");
+            double c = Convert.ToDouble(Console.ReadLine());
+            Console.Write("d= ");
+            double d = Convert.ToDouble(Console.ReadLine());
+            double s = Max(a, b) + Max(c, d);
+            Console.WriteLine($"max({a},{b})+max({c},{d})={s}");
             Console.Read();
         }
     }
