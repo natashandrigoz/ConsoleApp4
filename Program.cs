@@ -7,23 +7,16 @@ using System.Threading.Tasks;
 namespace ConsoleApp4
 {
     /// <summary>
-    /// Нахождение максимальной величины из двух целых переменных a, b
+    /// Найти наибольшее значение из трех чисел a, b, c
     /// </summary>
     internal class Program
     {
         ///<summary>
         ///Доп. метод нахождения максимальной величины
         ///</summary>
-        static double Func(double x, double y)
+        static double Max(double x, double y)
         {
-            if (x > y)
-            {
-                return x;
-            }
-            else
-            {
-                return y;
-            }
+            return (x > y) ? x : y;
         }
         /// <summary>
         /// Точка входа в программу
@@ -34,7 +27,9 @@ namespace ConsoleApp4
             double x = Convert.ToDouble(Console.ReadLine());
             Console.Write("y= ");
             double y = Convert.ToDouble(Console.ReadLine());
-            double max=Func(x,y);
+            Console.Write("z= ");
+            double z = Convert.ToDouble(Console.ReadLine());
+            double max = Max(Max(x, y),z);
             Console.WriteLine($"max= {max}");
             Console.Read();
         }
