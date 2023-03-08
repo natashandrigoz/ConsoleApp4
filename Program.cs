@@ -39,8 +39,13 @@ namespace ConsoleApp4
         /// </summary>
         static void Main()
         {
-            Func();
-            Func();
+            //Вызов метода Func() n раз
+            Console.Write("n= ");
+            byte n = byte.Parse(Console.ReadLine());
+            for (byte i=1;i<=n;i++)
+            {
+                Func(); // вызов метода Func
+            }
             Console.Read();
         }
     }
